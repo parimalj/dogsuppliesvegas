@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Supplies Outlet | Voted Best Pet Store in Las Vegas</title>
+  <meta name="description" content="Big box selection with small boutique service. 8 Las Vegas Valley locations, free self-wash stations, pet scales, and our unbeatable loyalty rewards program.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Cabinet Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              red: '#E11D48',
+              orange: '#F97316',
+              amber: '#F59E0B',
+              dark: '#0F172A',
+              card: '#1E293B',
+              light: '#F8FAFC'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .badge-glow {
+      box-shadow: 0 0 25px -5px rgba(249, 115, 22, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased selection:bg-orange-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-orange-600 via-amber-600 to-rose-600 text-white text-xs sm:text-sm font-semibold py-2 px-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 mx-auto sm:mx-0">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-white text-orange-600">NEW</span>
+        <span>8 Locations Across Vegas & Henderson • Open 7 Days: 9AM – 8PM</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-6 text-xs tracking-wider uppercase font-bold">
+        <span>🐾 Free Self-Dog Wash</span>
+        <span>⚖️ Free Pet Scales</span>
+        <span>🎁 Loyalty Points Never Expire</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-orange-600 to-amber-500 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
+            <i data-lucide="paw-print" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 leading-none">
+              <span class="font-display font-extrabold text-xl text-slate-900 tracking-tight">DOG SUPPLIES</span>
+              <span class="bg-orange-100 text-orange-700 text-[10px] font-extrabold px-1.5 py-0.5 rounded tracking-wide">OUTLET</span>
+            </div>
+            <p class="text-[11px] font-semibold text-slate-500 mt-1">Spoiling Vegas Dogs Since 2013</p>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-700">
+          <a href="#why-us" class="hover:text-orange-600 transition-colors">Why Choose Us</a>
+          <a href="#locations" class="hover:text-orange-600 transition-colors">Locations (8)</a>
+          <a href="#services" class="hover:text-orange-600 transition-colors">Self Wash & Perks</a>
+          <a href="#brands" class="hover:text-orange-600 transition-colors">Food Brands</a>
+          <a href="#rewards" class="hover:text-orange-600 transition-colors">Rewards Program</a>
+          <a href="#reviews" class="hover:text-orange-600 transition-colors">Reviews</a>
+        </nav>
+
+        <!-- CTA & Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#locations" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-rose-600 hover:from-orange-600 hover:to-rose-700 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-lg shadow-orange-500/25 transition-all hover:shadow-xl hover:shadow-orange-500/35">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Find a Store</span>
+          </a>
+          <button id="mobileMenuBtn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 font-semibold text-slate-700">
+      <a href="#why-us" class="block py-2 hover:text-orange-600">Why Choose Us</a>
+      <a href="#locations" class="block py-2 hover:text-orange-600">All 8 Locations</a>
+      <a href="#services" class="block py-2 hover:text-orange-600">Complimentary Services</a>
+      <a href="#brands" class="block py-2 hover:text-orange-600">Dog Food Brands</a>
+      <a href="#rewards" class="block py-2 hover:text-orange-600">Double-Dip Rewards</a>
+      <a href="#reviews" class="block py-2 hover:text-orange-600">Pet Parent Stories</a>
+      <a href="#locations" class="inline-flex w-full justify-center items-center gap-2 bg-orange-600 text-white py-3 rounded-xl font-bold">
+        <i data-lucide="navigation" class="w-4 h-4"></i> Get Directions
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative overflow-hidden pt-8 pb-16 lg:py-24 bg-gradient-to-b from-orange-50/70 via-white to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 border border-orange-200 text-orange-800 text-xs sm:text-sm font-bold">
+            <i data-lucide="award" class="w-4 h-4 text-orange-600"></i>
+            <span>Voted Las Vegas' #1 Pet Supplies Store</span>
+          </div>
+
+          <h1 class="font-display font-black text-4xl sm:text-6xl tracking-tight text-slate-900 leading-[1.08]">
+            Big Box Selection. <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-rose-600">Small Boutique Service.</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            The largest selection of dog foods, raw diets, toys, and gear in the Las Vegas Valley — backed by genuinely caring staff, the lowest prices guaranteed, and free self-wash stations.
+          </p>
+
+          <!-- Core Call to Actions -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#locations" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-slate-900/15 transition-all hover:scale-[1.02]">
+              <i data-lucide="navigation" class="w-5 h-5 text-orange-400"></i>
+              <span>Find Nearest Store (8 Valley-Wide)</span>
+            </a>
+            <a href="#rewards" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 font-bold text-base px-7 py-4 rounded-2xl transition-all">
+              <i data-lucide="gift" class="w-5 h-5 text-orange-600"></i>
+              <span>Explore Loyalty Perks</span>
+            </a>
+          </div>
+
+          <!-- Quick Trust Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200/80 max-w-lg mx-auto lg:mx-0">
+            <div>
+              <div class="font-display font-extrabold text-2xl text-slate-900">8 Outlets</div>
+              <div class="text-xs text-slate-500 font-medium">Vegas & Henderson</div>
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-2xl text-slate-900">100+ Brands</div>
+              <div class="text-xs text-slate-500 font-medium">Premium & Natural</div>
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-2xl text-slate-900">FREE Wash</div>
+              <div class="text-xs text-slate-500 font-medium">Self-Groom Stations</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Main Hero Image -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 aspect-[4/5] object-cover">
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1000&auto=format&fit=crop" alt="Happy Golden Retriever at Dog Supplies Outlet" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <div class="flex items-center gap-2 text-amber-400 mb-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  <span class="text-xs font-bold text-white ml-1">4.9 / 5 Rating</span>
+                </div>
+                <p class="font-bold text-base leading-snug">"Two complimentary self-wash tubs with warm water & high-velocity dryers. A total Las Vegas gem!"</p>
+                <p class="text-xs text-slate-300 mt-1">— Laura K., Verified Vegas Pet Parent</p>
+              </div>
+            </div>
+
+            <!-- Floating Card: Open Daily -->
+            <div class="absolute -top-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900">Open 7 Days a Week</div>
+                <div class="text-[11px] text-slate-500 font-semibold">9:00 AM – 8:00 PM Daily</div>
+              </div>
+            </div>
+
+            <!-- Floating Card: Double Dip Points -->
+            <div class="absolute -bottom-6 -right-4 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900">$1 = 1 Point</div>
+                <div class="text-[11px] text-orange-600 font-bold">Points Never Expire</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- The "Why Us" Difference Section -->
+  <section id="why-us" class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <h2 class="text-xs uppercase tracking-widest font-black text-orange-600">The Problem With Pet Retail</h2>
+        <p class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+          Who says you can't have your cake and eat it too?
+        </p>
+        <p class="text-slate-600 text-base leading-relaxed">
+          The problem with “big box” chain pet stores is typically the lack of knowledgeable staff and sterile vibes. The problem with small boutiques is sky-high pricing and limited shelf selection. We created Dog Supplies Outlet to eliminate both issues.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-14">
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-orange-200 hover:shadow-xl hover:shadow-orange-500/5 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-orange-500 text-white flex items-center justify-center mb-6">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-2">Massive Warehouse Selection</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            From raw and freeze-dried meals to grain-free kibble, gentle harnesses, orthopedic beds, and tough chew toys, our shelves are stocked deep.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-orange-200 hover:shadow-xl hover:shadow-orange-500/5 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white flex items-center justify-center mb-6">
+            <i data-lucide="tag" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-2">Guaranteed Lowest Prices</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            We purchase in extreme volume to pass direct distributor savings straight to Vegas pet families. You will never overpay for healthy pet care.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-orange-200 hover:shadow-xl hover:shadow-orange-500/5 transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center mb-6">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-2">Real Advice From Animal Lovers</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Our mission is to leave people and pets better than we found them. Our team will happily carry heavy 40lb bags right to your vehicle trunk.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- In-Store Complimentary Amenities -->
+  <section id="services" class="py-20 bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-orange-400 font-extrabold uppercase tracking-widest text-xs">Exclusively In Our Stores</span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-5xl mt-2 leading-tight">
+            Stress-Free Self Wash & Pet Wellness Scales.
+          </h2>
+          <p class="text-slate-300 mt-4 text-base leading-relaxed">
+            Keep your bathroom at home spotless. Bring your pup into our clean, dedicated bathing stations designed to accommodate everything from a 5 lb Chihuahua to a 120 lb Mastiff.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+              <div class="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0">
+                <i data-lucide="bath" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-base text-white">Free Self-Wash Stations</h4>
+                <p class="text-xs text-slate-300 mt-0.5">Complimentary hypoallergenic shampoos, rich conditioners, warm water sprayers, and pro blowout dryers.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                <i data-lucide="scale" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-base text-white">Walk-In Weight Scales (1–225 lbs)</h4>
+                <p class="text-xs text-slate-300 mt-0.5">Track your dog’s wellness journey and dietary goals completely free anytime you visit.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+              <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0">
+                <i data-lucide="scissors" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-base text-white">Nail Trimming Clinics</h4>
+                <p class="text-xs text-slate-300 mt-0.5">Select store locations offer scheduled walk-in nail trims and grooming care by gentle handlers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wash Showcase Image Grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=600&auto=format&fit=crop" alt="Dog enjoying bath" class="rounded-3xl shadow-lg w-full h-64 object-cover">
+            <div class="bg-orange-600 rounded-3xl p-6 text-white text-center">
+              <div class="font-display font-black text-3xl">100%</div>
+              <div class="text-xs font-semibold uppercase tracking-wider mt-1">Free With Purchase</div>
+            </div>
+          </div>
+          <div class="space-y-4 pt-8">
+            <div class="bg-slate-800 rounded-3xl p-6 text-slate-200 border border-slate-700 text-center">
+              <i data-lucide="sparkle" class="w-8 h-8 text-amber-400 mx-auto mb-2"></i>
+              <div class="font-display font-bold text-lg text-white">Large Breed Tubs</div>
+              <div class="text-xs text-slate-400 mt-1">Walk-in ramps for senior dogs</div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=600&auto=format&fit=crop" alt="Groomed happy dog" class="rounded-3xl shadow-lg w-full h-64 object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Las Vegas Locations -->
+  <section id="locations" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-orange-600 font-extrabold uppercase tracking-widest text-xs">Always Open Near You</span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-1">
+            8 Valley-Wide Outlets in Vegas & Henderson
+          </h2>
+          <p class="text-slate-600 mt-2 text-sm sm:text-base">
+            Every location is open 7 days a week from 9:00 AM to 8:00 PM. No appointment needed.
+          </p>
+        </div>
+        <!-- Filter Tabs -->
+        <div class="flex gap-2 p-1.5 bg-slate-200/80 rounded-xl self-start md:self-auto text-xs font-bold" id="locationFilter">
+          <button onclick="filterLocations('all')" class="loc-filter-btn px-4 py-2 rounded-lg bg-white shadow-sm text-slate-900">All (8)</button>
+          <button onclick="filterLocations('las-vegas')" class="loc-filter-btn px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900">Las Vegas (4)</button>
+          <button onclick="filterLocations('henderson')" class="loc-filter-btn px-4 py-2 rounded-lg text-slate-600 hover:text-slate-900">Henderson (4)</button>
+        </div>
+      </div>
+
+      <!-- Locations Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="locationsContainer">
+        
+        <!-- 1. Rainbow -->
+        <div class="location-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all" data-city="las-vegas">
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-extrabold bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full uppercase">Las Vegas</span>
+            <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Open Today</span>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-slate-900">Rainbow Store</h3>
+          <p class="text-xs text-slate-500 mt-1 flex items-start gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5"></i>
+            6181 S Rainbow Blvd #101, Las Vegas, NV 89118
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+            <a href="tel:7027786569" class="font-bold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-500"></i> (702) 778-6569
+            </a>
+            <a href="https://maps.google.com/?q=6181+S+Rainbow+Blvd+101+Las+Vegas+NV+89118" target="_blank" class="text-orange-600 hover:underline font-bold flex items-center gap-1">
+              Directions <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Sahara -->
+        <div class="location-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all" data-city="las-vegas">
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-extrabold bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full uppercase">Las Vegas</span>
+            <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Open Today</span>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-slate-900">Sahara Store</h3>
+          <p class="text-xs text-slate-500 mt-1 flex items-start gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5"></i>
+            8565 W Sahara Ave #102, Las Vegas, NV 89117
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+            <a href="tel:7028698690" class="font-bold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-500"></i> (702) 869-8690
+            </a>
+            <a href="https://maps.google.com/?q=8565+W+Sahara+Ave+102+Las+Vegas+NV+89117" target="_blank" class="text-orange-600 hover:underline font-bold flex items-center gap-1">
+              Directions <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Centennial / Sky Pointe -->
+        <div class="location-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all" data-city="las-vegas">
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-extrabold bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full uppercase">Las Vegas</span>
+            <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Open Today</span>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-slate-900">Centennial Store</h3>
+          <p class="text-xs text-slate-500 mt-1 flex items-start gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5"></i>
+            6420 Sky Pointe Dr #140, Las Vegas, NV 89131
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+            <a href="tel:7022011395" class="font-bold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-500"></i> (702) 201-1395
+            </a>
+            <a href="https://maps.google.com/?q=6420+Sky+Pointe+Dr+140+Las+Vegas+NV+89131" target="_blank" class="text-orange-600 hover:underline font-bold flex items-center gap-1">
+              Directions <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Hualapai -->
+        <div class="location-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all" data-city="las-vegas">
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-extrabold bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full uppercase">Las Vegas</span>
+            <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Open Today</span>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-slate-900">Hualapai Store</h3>
+          <p class="text-xs text-slate-500 mt-1 flex items-start gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5"></i>
+            6760 N Hualapai Way #185, Las Vegas, NV 89149
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+            <a href="tel:7252051188" class="font-bold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-500"></i> (725) 205-1188
+            </a>
+            <a href="https://maps.google.com/?q=6760+N+Hualapai+Way+185+Las+Vegas+NV+89149" target="_blank" class="text-orange-600 hover:underline font-bold flex items-center gap-1">
+              Directions <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Anthem -->
+        <div class="location-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all" data-city="henderson">
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-extrabold bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full uppercase">Henderson</span>
+            <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Open Today</span>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-slate-900">Anthem Store</h3>
+          <p class="text-xs text-slate-500 mt-1 flex items-start gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5"></i>
+            2581 Anthem Village Dr, Henderson, NV 89052
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+            <a href="tel:7029923622" class="font-bold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-500"></i> (702) 992-3622
+            </a>
+            <a href="https://maps.google.com/?q=2581+Anthem+Village+Dr+Henderson+NV+89052" target="_blank" class="text-orange-600 hover:underline font-bold flex items-center gap-1">
+              Directions <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. St Rose -->
+        <div class="location-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all" data-city="henderson">
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-extrabold bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full uppercase">Henderson</span>
+            <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Open Today</span>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-slate-900">St Rose Store</h3>
+          <p class="text-xs text-slate-500 mt-1 flex items-start gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5"></i>
+            2960 St Rose Pkwy #170, Henderson, NV 89052
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+            <a href="tel:7029017557" class="font-bold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-500"></i> (702) 901-7557
+            </a>
+            <a href="https://maps.google.com/?q=2960+St+Rose+Pkwy+170+Henderson+NV+89052" target="_blank" class="text-orange-600 hover:underline font-bold flex items-center gap-1">
+              Directions <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 7. Green Valley -->
+        <div class="location-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all" data-city="henderson">
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-extrabold bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full uppercase">Henderson</span>
+            <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Open Today</span>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-slate-900">Green Valley Store</h3>
+          <p class="text-xs text-slate-500 mt-1 flex items-start gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5"></i>
+            55 S Valle Verde Dr #300, Henderson, NV 89012
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+            <a href="tel:7252041480" class="font-bold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-500"></i> (725) 204-1480
+            </a>
+            <a href="https://maps.google.com/?q=55+S+Valle+Verde+Dr+300+Henderson+NV+89012" target="_blank" class="text-orange-600 hover:underline font-bold flex items-center gap-1">
+              Directions <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. Sunset -->
+        <div class="location-card bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all" data-city="henderson">
+          <div class="flex justify-between items-start mb-3">
+            <span class="text-xs font-extrabold bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full uppercase">Henderson</span>
+            <span class="text-[11px] font-bold text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>Open Today</span>
+          </div>
+          <h3 class="font-display font-extrabold text-lg text-slate-900">Sunset Store</h3>
+          <p class="text-xs text-slate-500 mt-1 flex items-start gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5"></i>
+            2714 N Green Valley Pkwy, Henderson, NV 89014
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+            <a href="tel:7029923886" class="font-bold text-slate-800 hover:text-orange-600 flex items-center gap-1">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-orange-500"></i> (702) 992-3886
+            </a>
+            <a href="https://maps.google.com/?q=2714+N+Green+Valley+Parkway+Henderson+NV+89014" target="_blank" class="text-orange-600 hover:underline font-bold flex items-center gap-1">
+              Directions <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Pet Nutrition & Brands -->
+  <section id="brands" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="text-orange-600 font-extrabold uppercase tracking-widest text-xs">High Quality Nutrition</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-1">
+          Top-Tier Natural Food Brands You Trust
+        </h2>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">
+          Feeding quality food saves thousands in veterinary bills over your dog’s lifetime. We carry raw, freeze-dried, gently cooked, and premium grain-free kibble.
+        </p>
+      </div>
+
+      <!-- Brand Logos Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-12">
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Acana</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Orijen</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Stella & Chewy's</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Taste of the Wild</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Fromm Family</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Open Farm</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Honest Kitchen</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Farmina N&D</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Primal Raw</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Nulo Freestyle</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">NutriSource</div>
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center font-bold text-slate-700 hover:border-orange-300 transition-all">Zignature</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The "Way Different" Loyalty Program & Interactive Calculator -->
+  <section id="rewards" class="py-20 bg-gradient-to-br from-amber-500 via-orange-500 to-rose-600 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider">
+            <i data-lucide="zap" class="w-4 h-4"></i> No Plastic Cards Needed
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-5xl leading-tight">
+            A Loyalty Program That Actually Adds Up!
+          </h2>
+          <p class="text-orange-50 text-base leading-relaxed">
+            Tired of spending $200 at big chains just to get a $1.20 coupon in the mail? Our program gives you credit on <strong>EVERYTHING</strong> in store — food, treats, leashes, beds, toys, and grooming supplies.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20">
+              <div class="font-display font-extrabold text-2xl text-white">Points Never Expire</div>
+              <p class="text-xs text-orange-100 mt-1">Bank your points as long as you want or spend them next visit.</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/20">
+              <div class="font-display font-extrabold text-2xl text-white">Double Dip Savings</div>
+              <p class="text-xs text-orange-100 mt-1">Buy 10 or 12 bags of dog food and get 1 bag totally free on top of your points.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs font-semibold text-orange-100">
+            <i data-lucide="check-circle" class="w-4 h-4 text-white"></i>
+            <span>Instant sign-up at checkout with just your phone number in 30 seconds.</span>
+          </div>
+        </div>
+
+        <!-- Loyalty Calculator Card -->
+        <div class="lg:col-span-6">
+          <div class="bg-white text-slate-900 rounded-3xl p-8 shadow-2xl border border-white/30">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div class="font-display font-extrabold text-xl text-slate-900">Points Value Estimator</div>
+              <span class="text-xs font-bold bg-orange-100 text-orange-700 px-2.5 py-1 rounded-full">$1 = 1 Point</span>
+            </div>
+
+            <div class="mt-6 space-y-6">
+              <div>
+                <label for="spendRange" class="flex justify-between text-sm font-bold text-slate-700 mb-2">
+                  <span>How much do you spend on your dog per month?</span>
+                  <span id="spendDisplay" class="text-orange-600 font-extrabold text-lg">$100</span>
+                </label>
+                <input type="range" id="spendRange" min="20" max="400" step="10" value="100" class="w-full accent-orange-500 cursor-pointer h-2 bg-slate-200 rounded-lg">
+              </div>
+
+              <!-- Estimated Earnings Card -->
+              <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-3">
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-slate-600 font-medium">Annual Points Earned:</span>
+                  <span id="pointsOutput" class="font-extrabold text-slate-900">1,200 pts</span>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                  <span class="text-slate-600 font-medium">Free Bag Frequency:</span>
+                  <span class="font-extrabold text-emerald-600">~1 Free Bag Every Year</span>
+                </div>
+                <div class="pt-3 border-t border-slate-200 flex justify-between items-center">
+                  <span class="font-display font-bold text-base text-slate-800">Your Annual Reward Value:</span>
+                  <span id="dollarsOutput" class="font-display font-black text-2xl text-orange-600">$140+ Value</span>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <a href="#locations" class="inline-flex w-full justify-center items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-6 rounded-xl transition-all">
+                  Join Free at Any of Our 8 Locations
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Pet Parent Testimonials -->
+  <section id="reviews" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-orange-600 font-extrabold uppercase tracking-widest text-xs">Community Love</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-1">
+          Loved by Vegas Pet Parents
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">Real reviews from local Henderson and Las Vegas dog owners.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <!-- Review 1 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "They have every natural pet product you could ever want! And a great rewards program. But wait.. there's more! Two complimentary self-grooming stations with shampoos and dryers. Their tubs can even fit big boys — my dog is 110 lbs!"
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <div class="font-bold text-sm text-slate-900">Franci Davidson</div>
+            <div class="text-xs text-slate-500">Regular Customer • Henderson</div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "In addition to their unbeatable prices, the loyalty program is straightforward, racks up points quickly, and makes a huge difference for our family budget. I'll never shop at the big box stores again!"
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <div class="font-bold text-sm text-slate-900">Bear Gibbs</div>
+            <div class="text-xs text-slate-500">Rainbow Store Shopper</div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Every time I go to the Sahara store the employees are TOTALLY AWESOME! They carry large bags to my car, know their inventory inside and out, and are so gentle with dogs. This place is a Las Vegas gem."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <div class="font-bold text-sm text-slate-900">Nancy Shaw</div>
+            <div class="text-xs text-slate-500">Sahara Store Shopper</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-extrabold text-3xl text-slate-900">Frequently Asked Questions</h2>
+        <p class="text-slate-600 text-sm mt-2">Everything you need to know before your visit.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Q1 -->
+        <details class="group bg-slate-50 rounded-2xl p-5 border border-slate-200/80 open:bg-white open:shadow-md transition-all">
+          <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none">
+            <span>Do my loyalty points ever expire?</span>
+            <span class="text-orange-600 transition-transform group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            No! Your points never expire. You can redeem them as a $4 discount tomorrow or save up to 500 points to take $60 off an entire purchase.
+          </p>
+        </details>
+
+        <!-- Q2 -->
+        <details class="group bg-slate-50 rounded-2xl p-5 border border-slate-200/80 open:bg-white open:shadow-md transition-all">
+          <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none">
+            <span>Is the self-wash station really free?</span>
+            <span class="text-orange-600 transition-transform group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            Yes! Wash stations are complimentary with regular in-store purchases. We provide professional stainless steel walk-in tubs, shampoos, conditioners, clean towels, and blow dryers so you never have to clean a messy bathroom at home.
+          </p>
+        </details>
+
+        <!-- Q3 -->
+        <details class="group bg-slate-50 rounded-2xl p-5 border border-slate-200/80 open:bg-white open:shadow-md transition-all">
+          <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none">
+            <span>Are dogs allowed inside the store?</span>
+            <span class="text-orange-600 transition-transform group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            100% yes! Well-behaved, leashed dogs are always welcome. Bring them by to pick out their own chew toy, try on a harness, or get free treats from our cashiers.
+          </p>
+        </details>
+
+        <!-- Q4 -->
+        <details class="group bg-slate-50 rounded-2xl p-5 border border-slate-200/80 open:bg-white open:shadow-md transition-all">
+          <summary class="flex justify-between items-center font-bold text-slate-900 cursor-pointer list-none">
+            <span>What are your store hours?</span>
+            <span class="text-orange-600 transition-transform group-open:rotate-180">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            All 8 store locations are open 7 days a week from 9:00 AM to 8:00 PM.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Footer Banner -->
+  <section class="py-16 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+      <h2 class="font-display font-extrabold text-3xl sm:text-5xl">Stop by Today & Spoil Your Best Friend</h2>
+      <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+        Visit any of our 8 Las Vegas & Henderson locations. Warm smiles, great prices, and tail wags guaranteed.
+      </p>
+      <div class="pt-2">
+        <a href="#locations" class="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-rose-600 hover:from-orange-600 hover:to-rose-700 text-white font-extrabold text-base px-8 py-4 rounded-full shadow-lg shadow-orange-500/25 transition-all">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
+          <span>View All 8 Store Locations & Hours</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Clean Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-orange-600 flex items-center justify-center text-white font-bold">
+          <i data-lucide="paw-print" class="w-4 h-4"></i>
+        </div>
+        <span class="text-white font-bold tracking-tight">Dog Supplies Outlet • Las Vegas & Henderson</span>
+      </div>
+      <p class="text-xs text-slate-500">
+        &copy; 2013–2026 Dog Supplies Outlet. All Rights Reserved. Built with modern web performance standards.
+      </p>
+      <div class="flex gap-6 text-xs">
+        <a href="#hero" class="hover:text-white transition-colors">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Interactive Loyalty Calculator
+    const spendRange = document.getElementById('spendRange');
+    const spendDisplay = document.getElementById('spendDisplay');
+    const pointsOutput = document.getElementById('pointsOutput');
+    const dollarsOutput = document.getElementById('dollarsOutput');
+
+    spendRange.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      spendDisplay.textContent = `$${val}`;
+      const annualPoints = val * 12;
+      pointsOutput.textContent = `${annualPoints.toLocaleString()} pts`;
+      
+      // Calculate reward tier savings estimate (roughly $60 per 500 pts = 12% + food bag savings)
+      const annualCashValue = Math.round((annualPoints / 500) * 60);
+      dollarsOutput.textContent = `$${annualCashValue + 50}+ Value`;
+    });
+
+    // Location Filter
+    function filterLocations(city) {
+      const cards = document.querySelectorAll('.location-card');
+      const buttons = document.querySelectorAll('.loc-filter-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-white', 'shadow-sm', 'text-slate-900');
+        btn.classList.add('text-slate-600');
+      });
+      event.target.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
+      event.target.classList.remove('text-slate-600');
+
+      cards.forEach(card => {
+        if (city === 'all' || card.dataset.city === city) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
