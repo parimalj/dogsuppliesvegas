@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Supplies Outlet | Best Pet Stores In Las Vegas</title>
+  
+  <!-- Retro Fonts: Abril Fatface for bold vintage headings, DM Sans for clean reading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['"Abril Fatface"', 'serif'],
+          },
+          colors: {
+            vintage: {
+              paper: '#FDF8F1',    // Warm cream background
+              blue: '#1E3A8A',     // Deep navy
+              royal: '#0088CC',    // Original cyan-blue logo color
+              red: '#DC2626',      // Classic vintage red pop
+              gold: '#F59E0B',     // Retro mustard/gold
+              dark: '#172554'      // Ink black/blue
+            }
+          },
+          boxShadow: {
+            'retro': '6px 6px 0px 0px rgba(30, 58, 138, 1)',
+            'retro-hover': '2px 2px 0px 0px rgba(30, 58, 138, 1)',
+            'retro-white': '6px 6px 0px 0px rgba(253, 248, 241, 1)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FDF8F1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+    .slider-transition {
+      transition: opacity 0.6s ease-in-out;
+    }
+    .retro-border {
+      border: 3px solid #1E3A8A;
+    }
+  </style>
+</head>
+<body class="text-vintage-dark antialiased selection:bg-vintage-royal selection:text-white">
+
+  <!-- Vintage Ticket Announcement Bar -->
+  <div class="bg-vintage-red text-vintage-paper text-xs sm:text-sm font-bold py-3 px-4 border-b-4 border-vintage-blue">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 mx-auto sm:mx-0 tracking-widest uppercase">
+        <span class="inline-flex items-center px-2 py-0.5 bg-vintage-gold text-vintage-blue border-2 border-vintage-blue text-[10px] font-black shadow-[2px_2px_0_0_#1E3A8A]">VOTED #1</span>
+        <span>8 Vegas Locations • Open 7 Days: 9AM – 8PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Retro Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-vintage-paper border-b-4 border-vintage-blue shadow-retro">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-24">
+        
+        <!-- Standalone Inline Vector Replica of the Original Mascot Logo -->
+        <a href="#hero" class="flex items-center group py-2">
+          <svg class="h-14 sm:h-16 w-auto transition-transform group-hover:scale-105" viewBox="0 0 460 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="dog-mascot">
+              <!-- Ears -->
+              <ellipse cx="65" cy="52" rx="20" ry="32" transform="rotate(-30 65 52)" fill="#8D7B68" stroke="#1E3A8A" stroke-width="4"/>
+              <ellipse cx="142" cy="62" rx="18" ry="30" transform="rotate(25 142 62)" fill="#8D7B68" stroke="#1E3A8A" stroke-width="4"/>
+              <!-- Head -->
+              <path d="M 75 80 C 75 48, 135 48, 135 80 C 135 110, 75 110, 75 80 Z" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="5"/>
+              <!-- Eye Patch -->
+              <ellipse cx="94" cy="78" rx="14" ry="17" fill="#665646"/>
+              <!-- Eyes -->
+              <circle cx="94" cy="78" r="4.5" fill="#FFFFFF"/>
+              <circle cx="118" cy="80" r="4" fill="#1E3A8A"/>
+              <!-- Snout & Nose -->
+              <ellipse cx="106" cy="94" rx="15" ry="11" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="3.5"/>
+              <ellipse cx="106" cy="92" rx="8" ry="5.5" fill="#1E3A8A"/>
+              <!-- Blue Collar -->
+              <path d="M 85 112 Q 106 122 127 112" stroke="#0088CC" stroke-width="9" stroke-linecap="round"/>
+              <!-- Body -->
+              <path d="M 88 118 Q 80 148 68 152 Q 110 155 125 152 Q 132 144 125 118" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="4.5"/>
+              <!-- Paws -->
+              <ellipse cx="80" cy="153" rx="15" ry="7" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="3.5"/>
+              <ellipse cx="118" cy="153" rx="15" ry="7" fill="#FFFFFF" stroke="#1E3A8A" stroke-width="3.5"/>
+            </g>
+            <!-- Original Stylized Brand Typography -->
+            <g id="brand-typography">
+              <!-- DOG text in cyan-blue with retro white border & deep navy outline -->
+              <text x="160" y="82" font-family="'Abril Fatface', Georgia, serif" font-size="78" font-style="italic" fill="#0088CC" stroke="#1E3A8A" stroke-width="6" paint-order="stroke fill" letter-spacing="3">DOG</text>
+              <text x="160" y="82" font-family="'Abril Fatface', Georgia, serif" font-size="78" font-style="italic" fill="#0088CC" letter-spacing="3">DOG</text>
+              <!-- SUPPLIES text in silver-grey with strong outline -->
+              <text x="156" y="142" font-family="'DM Sans', Arial, sans-serif" font-weight="900" font-size="52" fill="#D1D5DB" stroke="#1E3A8A" stroke-width="6" paint-order="stroke fill" letter-spacing="1">SUPPLIES</text>
+              <text x="156" y="142" font-family="'DM Sans', Arial, sans-serif" font-weight="900" font-size="52" fill="#E5E7EB" letter-spacing="1">SUPPLIES</text>
+            </g>
+          </svg>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-black text-vintage-blue uppercase tracking-widest">
+          <a href="#why-us" class="hover:text-vintage-red transition-colors">Why Us</a>
+          <a href="#locations" class="hover:text-vintage-red transition-colors">Locations</a>
+          <a href="#services" class="hover:text-vintage-red transition-colors">Self-Wash</a>
+          <a href="#foods" class="hover:text-vintage-red transition-colors">Dog Foods</a>
+          <a href="#rewards" class="hover:text-vintage-red transition-colors">Rewards</a>
+          <a href="#reviews" class="hover:text-vintage-red transition-colors">Reviews</a>
+        </nav>
+
+        <!-- Right Side CTA -->
+        <div class="flex items-center gap-3">
+          <a href="#locations" class="hidden sm:inline-flex items-center gap-2 bg-vintage-royal text-white font-black text-sm uppercase tracking-wider px-6 py-3 retro-border shadow-retro hover:shadow-retro-hover hover:translate-y-1 transition-all">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Find a Store</span>
+          </a>
+          <button id="mobileMenuBtn" aria-label="Toggle Menu" class="lg:hidden p-2 border-2 border-vintage-blue bg-vintage-gold text-vintage-blue shadow-[3px_3px_0_0_#1E3A8A] hover:translate-y-px transition">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t-4 border-vintage-blue bg-vintage-blue px-5 pt-4 pb-6 space-y-3 font-black text-white uppercase tracking-wider">
+      <a href="#why-us" class="block py-2 hover:text-vintage-gold">Why Choose Us</a>
+      <a href="#locations" class="block py-2 hover:text-vintage-gold">All 8 Locations</a>
+      <a href="#services" class="block py-2 hover:text-vintage-gold">Free Dog Wash</a>
+      <a href="#foods" class="block py-2 hover:text-vintage-gold">Dog Foods</a>
+      <a href="#rewards" class="block py-2 hover:text-vintage-gold">Loyalty Program</a>
+      <a href="#reviews" class="block py-2 hover:text-vintage-gold">Reviews</a>
+    </div>
+  </header>
+
+  <!-- Full-Width Retro Hero Slider -->
+  <section id="hero" class="relative w-full h-[600px] sm:h-[700px] overflow-hidden bg-vintage-blue border-b-4 border-vintage-blue">
+    <div id="sliderWrapper" class="relative w-full h-full">
+
+      <!-- Slide 1: Dog 1 -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-100 z-10 slider-transition">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=2000&q=80" alt="Spoiling Dogs in Las Vegas" class="w-full h-full object-cover object-center grayscale-[20%] sepia-[10%]">
+        <div class="absolute inset-0 bg-vintage-blue/40 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-vintage-dark/95 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl text-left space-y-6">
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-vintage-gold text-vintage-dark font-black tracking-widest uppercase text-xs retro-border shadow-retro">
+                Est. 2013
+              </div>
+              <h1 class="font-display text-5xl sm:text-7xl text-vintage-paper leading-[1.1] drop-shadow-[4px_4px_0_rgba(220,38,38,1)]">
+                Spoiling Dogs In Las Vegas Since 2013
+              </h1>
+              <p class="text-lg sm:text-xl text-vintage-paper font-medium font-sans max-w-lg">
+                The largest inventory of premium pet nutrition, raw formulas, and tough toys at everyday low outlet pricing.
+              </p>
+              <div class="pt-4">
+                <a href="#locations" class="inline-flex items-center gap-3 bg-vintage-red text-white font-black uppercase tracking-wider px-8 py-4 retro-border shadow-retro-white hover:shadow-retro-hover hover:translate-y-1 transition-all">
+                  Visit Us Today
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Dog 2 (Fixed & Verified CDN Image) -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 z-0 slider-transition">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=2000&q=80" alt="Upgrade Your Pet's Happiness" class="w-full h-full object-cover object-center grayscale-[20%] sepia-[10%]">
+        <div class="absolute inset-0 bg-vintage-blue/40 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-vintage-dark/95 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl text-left space-y-6">
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-vintage-royal text-white font-black tracking-widest uppercase text-xs retro-border shadow-retro">
+                Nutrition First
+              </div>
+              <h2 class="font-display text-5xl sm:text-7xl text-vintage-paper leading-[1.1] drop-shadow-[4px_4px_0_rgba(0,136,204,1)]">
+                Upgrade Your Pet's Happiness
+              </h2>
+              <p class="text-lg sm:text-xl text-vintage-paper font-medium font-sans max-w-lg">
+                Allergy-friendly recipes, raw diets, freeze-dried delights, and treats your best friend will go crazy for.
+              </p>
+              <div class="pt-4">
+                <a href="#foods" class="inline-flex items-center gap-3 bg-vintage-gold text-vintage-dark font-black uppercase tracking-wider px-8 py-4 retro-border shadow-retro-white hover:shadow-retro-hover hover:translate-y-1 transition-all">
+                  Shop Premium Foods
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Dog 3 -->
+      <div class="hero-slide absolute inset-0 w-full h-full opacity-0 z-0 slider-transition">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=2000&q=80" alt="Bring Joy to Playtime" class="w-full h-full object-cover object-center grayscale-[20%] sepia-[10%]">
+        <div class="absolute inset-0 bg-vintage-blue/40 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-vintage-dark/95 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-2xl text-left space-y-6">
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-vintage-red text-white font-black tracking-widest uppercase text-xs retro-border shadow-retro">
+                Tough Chews
+              </div>
+              <h2 class="font-display text-5xl sm:text-7xl text-vintage-paper leading-[1.1] drop-shadow-[4px_4px_0_rgba(245,158,11,1)]">
+                Bring Joy to Playtime
+              </h2>
+              <p class="text-lg sm:text-xl text-vintage-paper font-medium font-sans max-w-lg">
+                Massive deals on indestructible chew toys, interactive treat dispensers, fetch balls, and gentle walk gear.
+              </p>
+              <div class="pt-4">
+                <a href="#services" class="inline-flex items-center gap-3 bg-vintage-paper text-vintage-dark font-black uppercase tracking-wider px-8 py-4 retro-border shadow-retro-white hover:shadow-retro-hover hover:translate-y-1 transition-all">
+                  See Store Amenities
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Retro Slider Controls -->
+    <button onclick="prevSlide()" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-vintage-gold text-vintage-blue retro-border shadow-[4px_4px_0_0_#1E3A8A] flex items-center justify-center hover:translate-y-1 hover:shadow-[2px_2px_0_0_#1E3A8A] transition-all">
+      <i data-lucide="arrow-left" class="w-6 h-6 stroke-[3]"></i>
+    </button>
+    <button onclick="nextSlide()" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-14 h-14 bg-vintage-gold text-vintage-blue retro-border shadow-[4px_4px_0_0_#1E3A8A] flex items-center justify-center hover:translate-y-1 hover:shadow-[2px_2px_0_0_#1E3A8A] transition-all">
+      <i data-lucide="arrow-right" class="w-6 h-6 stroke-[3]"></i>
+    </button>
+  </section>
+
+  <!-- Big Box vs Boutique Proposition -->
+  <section id="why-us" class="py-24 bg-vintage-paper">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <h2 class="font-display text-4xl sm:text-6xl text-vintage-blue tracking-wide">
+          Who Says You Can't Have Your Cake And Eat It Too?
+        </h2>
+        <div class="w-24 h-2 bg-vintage-red mx-auto"></div>
+        <p class="text-vintage-dark text-lg sm:text-xl font-medium leading-relaxed max-w-3xl mx-auto">
+          The problem with "big box" pet stores is the lack of staff and high shelf markup. The problem with small boutique stores is tiny selection and sky-high prices. <strong class="text-vintage-red block mt-2 text-2xl font-display tracking-widest">We Fixed Both.</strong>
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10 mt-20">
+        <!-- Card 1 -->
+        <div class="bg-white retro-border shadow-retro p-8 transform hover:-translate-y-2 transition-transform">
+          <div class="w-16 h-16 bg-vintage-royal text-white retro-border flex items-center justify-center mb-6 shadow-[3px_3px_0_0_#1E3A8A]">
+            <i data-lucide="store" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-display text-2xl text-vintage-blue mb-4">Largest Selection</h3>
+          <p class="text-vintage-dark font-medium leading-relaxed">
+            Thousands of products in stock daily. Everything from allergy-specific dog foods, raw bars, training collars, to plush beds.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white retro-border shadow-retro p-8 transform hover:-translate-y-2 transition-transform">
+          <div class="w-16 h-16 bg-vintage-red text-white retro-border flex items-center justify-center mb-6 shadow-[3px_3px_0_0_#1E3A8A]">
+            <i data-lucide="tag" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-display text-2xl text-vintage-blue mb-4">Lowest Prices</h3>
+          <p class="text-vintage-dark font-medium leading-relaxed">
+            By purchasing in high volume for our 8 valley stores, we offer distributor-direct discounts on top food brands every day.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white retro-border shadow-retro p-8 transform hover:-translate-y-2 transition-transform">
+          <div class="w-16 h-16 bg-vintage-gold text-vintage-blue retro-border flex items-center justify-center mb-6 shadow-[3px_3px_0_0_#1E3A8A]">
+            <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+          </div>
+          <h3 class="font-display text-2xl text-vintage-blue mb-4">Superior Service</h3>
+          <p class="text-vintage-dark font-medium leading-relaxed">
+            Our mission is simple: leave people and pets better than we found them. We'll even carry 40lb bags straight to your car!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Self-Wash Section with Verified Images -->
+  <section id="services" class="py-24 bg-vintage-blue text-vintage-paper border-y-4 border-vintage-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        
+        <div class="space-y-8">
+          <h2 class="font-display text-5xl sm:text-6xl text-vintage-gold drop-shadow-[3px_3px_0_rgba(23,37,84,1)] leading-none">
+            Stress-Free Self Wash & Scales
+          </h2>
+          <p class="text-xl font-medium leading-relaxed">
+            Skip the messy bathtub wrestling match at home! Use our commercial-grade raised stainless tubs completely free with any regular in-store purchase.
+          </p>
+
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4 bg-vintage-dark/50 p-6 retro-border shadow-[4px_4px_0_0_#F59E0B]">
+              <i data-lucide="bath" class="w-8 h-8 text-vintage-gold shrink-0"></i>
+              <div>
+                <h4 class="font-display text-2xl text-white tracking-wide">Free Grooming Tubs</h4>
+                <p class="text-slate-300 mt-2 font-medium">Tubs fit dogs up to 120+ lbs comfortably with easy walk-up ramps. We supply the shampoo, warm water, and blow dryers.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4 bg-vintage-dark/50 p-6 retro-border shadow-[4px_4px_0_0_#0088CC]">
+              <i data-lucide="scale" class="w-8 h-8 text-vintage-royal shrink-0"></i>
+              <div>
+                <h4 class="font-display text-2xl text-white tracking-wide">Walk-In Weight Scales</h4>
+                <p class="text-slate-300 mt-2 font-medium">Keep track of your furry friend’s wellness journey and dietary goals anytime.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+          <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=700&q=80" alt="Dog in Bath" class="w-full h-72 object-cover retro-border shadow-[6px_6px_0_0_#F59E0B] grayscale-[10%]">
+          <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=700&q=80" alt="Clean Happy Dog" class="w-full h-72 object-cover retro-border shadow-[6px_6px_0_0_#EF4444] mt-12 grayscale-[10%]">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Dog Foods Section -->
+  <section id="foods" class="py-24 bg-vintage-paper border-b-4 border-vintage-blue">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-display text-5xl sm:text-6xl text-vintage-blue tracking-wide mb-6">
+            Brands You Can't Find In Big Box Stores
+          </h2>
+          <div class="w-24 h-2 bg-vintage-red mb-6"></div>
+          <p class="text-vintage-dark text-xl font-medium leading-relaxed">
+            Opting for mid to premium quality dog foods can prove cost-effective in the long run. High-protein, nutrient-dense foods let you feed smaller portions than filler-loaded grocery brands while cutting back on expensive veterinary bills.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-6 mt-10">
+            <div class="p-4 bg-white retro-border shadow-[3px_3px_0_0_#1E3A8A] flex items-center gap-4">
+              <i data-lucide="check-square" class="w-6 h-6 text-vintage-red"></i>
+              <span class="font-bold text-vintage-dark uppercase tracking-wider">Raw & Frozen Bars</span>
+            </div>
+            <div class="p-4 bg-white retro-border shadow-[3px_3px_0_0_#1E3A8A] flex items-center gap-4">
+              <i data-lucide="check-square" class="w-6 h-6 text-vintage-red"></i>
+              <span class="font-bold text-vintage-dark uppercase tracking-wider">Freeze-Dried Toppers</span>
+            </div>
+            <div class="p-4 bg-white retro-border shadow-[3px_3px_0_0_#1E3A8A] flex items-center gap-4">
+              <i data-lucide="check-square" class="w-6 h-6 text-vintage-red"></i>
+              <span class="font-bold text-vintage-dark uppercase tracking-wider">Grain-Free Diet</span>
+            </div>
+            <div class="p-4 bg-white retro-border shadow-[3px_3px_0_0_#1E3A8A] flex items-center gap-4">
+              <i data-lucide="check-square" class="w-6 h-6 text-vintage-red"></i>
+              <span class="font-bold text-vintage-dark uppercase tracking-wider">Gently Cooked Wet Food</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Brand Badges -->
+        <div class="bg-vintage-red p-8 sm:p-12 retro-border shadow-retro">
+          <h3 class="font-display text-3xl text-white mb-8 text-center drop-shadow-[2px_2px_0_rgba(30,58,138,1)]">Premium In-Stock Brands</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Acana</div>
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Orijen</div>
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Stella & Chewy's</div>
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Taste of the Wild</div>
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Fromm</div>
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Open Farm</div>
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Honest Kitchen</div>
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Farmina</div>
+            <div class="p-4 bg-vintage-paper retro-border text-center font-black text-vintage-blue uppercase tracking-wider">Primal Raw</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Loyalty Program & Interactive Rewards Calculator -->
+  <section id="rewards" class="py-24 bg-vintage-gold border-b-4 border-vintage-blue">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-16 items-center">
+        
+        <div class="lg:col-span-6 space-y-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-vintage-paper text-vintage-blue font-black tracking-widest uppercase text-xs retro-border shadow-[3px_3px_0_0_#1E3A8A]">
+            No Plastic Cards Needed
+          </div>
+
+          <h2 class="font-display text-5xl sm:text-6xl text-vintage-blue leading-none drop-shadow-[2px_2px_0_rgba(253,248,241,1)]">
+            A Loyalty Program That Actually Adds Up!
+          </h2>
+
+          <p class="text-vintage-dark text-xl font-medium leading-relaxed">
+            We’ve all joined reward programs only to find after spending hundreds of dollars you earn a measly “rebate” of $1.28. What’s the point of that? <strong class="text-vintage-red block mt-2">Our loyalty program is different. WAY Different!</strong>
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-6 pt-4">
+            <div class="bg-white p-6 retro-border shadow-[4px_4px_0_0_#1E3A8A]">
+              <div class="font-display text-2xl text-vintage-blue mb-2">Points Never Expire</div>
+              <p class="text-sm text-vintage-dark font-medium">Short on cash? Use a $4 credit tomorrow. Or bank 500 pts and take $60 off!</p>
+            </div>
+            <div class="bg-white p-6 retro-border shadow-[4px_4px_0_0_#1E3A8A]">
+              <div class="font-display text-2xl text-vintage-blue mb-2">Double Dip Savings</div>
+              <p class="text-sm text-vintage-dark font-medium">Earn Astro Loyalty free food bags (buy 10-12, get 1 free) ON TOP of your outlet points.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Calculator Widget -->
+        <div class="lg:col-span-6">
+          <div class="bg-vintage-paper retro-border p-8 sm:p-10 shadow-retro">
+            <div class="flex items-center justify-between pb-6 border-b-4 border-vintage-blue">
+              <div>
+                <h3 class="font-display text-3xl text-vintage-blue">Reward Calculator</h3>
+                <p class="text-sm text-vintage-dark font-bold uppercase tracking-wider mt-1">See your savings multiply</p>
+              </div>
+              <span class="text-sm font-black bg-vintage-red text-white px-4 py-2 retro-border shadow-[2px_2px_0_0_#1E3A8A]">$1 = 1 Point</span>
+            </div>
+
+            <div class="mt-8 space-y-8">
+              <div>
+                <label for="spendRange" class="flex justify-between items-center text-lg font-black text-vintage-blue mb-4 uppercase tracking-wide">
+                  <span>Monthly Dog Budget:</span>
+                  <span id="spendDisplay" class="text-vintage-red text-3xl font-display">$100</span>
+                </label>
+                <input type="range" id="spendRange" min="20" max="400" step="10" value="100" class="w-full accent-vintage-red cursor-pointer h-4 bg-white retro-border">
+                <div class="flex justify-between text-xs text-vintage-dark font-black uppercase tracking-wider mt-3">
+                  <span>$20/mo</span>
+                  <span>$200/mo</span>
+                  <span>$400/mo</span>
+                </div>
+              </div>
+
+              <!-- Output Box -->
+              <div class="bg-white p-8 retro-border shadow-[4px_4px_0_0_#1E3A8A] space-y-4">
+                <div class="flex justify-between items-center border-b-2 border-vintage-paper pb-4">
+                  <span class="text-vintage-blue font-bold uppercase tracking-wider">Annual Points Earned:</span>
+                  <span id="pointsOutput" class="font-black text-vintage-dark text-xl">1,200 pts</span>
+                </div>
+                <div class="flex justify-between items-center border-b-2 border-vintage-paper pb-4">
+                  <span class="text-vintage-blue font-bold uppercase tracking-wider">Free Food Bags:</span>
+                  <span class="font-black text-green-700 text-xl">+1 FREE Bag (~$65 Value)</span>
+                </div>
+                <div class="flex justify-between items-center pt-2">
+                  <span class="font-display text-2xl text-vintage-blue">Total Value Back:</span>
+                  <span id="dollarsOutput" class="font-display text-4xl text-vintage-red drop-shadow-[1px_1px_0_rgba(30,58,138,1)]">$209+ Value</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Pet Parent Testimonials -->
+  <section id="reviews" class="py-24 bg-vintage-paper border-b-4 border-vintage-blue">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="font-display text-5xl sm:text-6xl text-vintage-blue tracking-wide">
+          Loved by Vegas Pet Parents
+        </h2>
+        <div class="w-24 h-2 bg-vintage-red mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10 mt-20">
+        
+        <!-- Laura Kuan -->
+        <div class="bg-white p-8 retro-border shadow-retro flex flex-col justify-between transform hover:-translate-y-2 transition-transform">
+          <div class="space-y-6">
+            <div class="flex text-vintage-gold gap-1">
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+            </div>
+            <p class="text-vintage-dark font-medium italic leading-relaxed text-lg">
+              "They have every natural pet product you could ever want! And a great rewards program. Two complimentary self-grooming stations with extremely-handy dryers. Their tubs can even fit the big boys! My dog is 110 pounds."
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t-4 border-vintage-paper">
+            <div class="font-display text-2xl text-vintage-blue">Laura Kuan</div>
+            <div class="text-xs text-vintage-dark font-black uppercase tracking-wider mt-1">Henderson Pet Parent</div>
+          </div>
+        </div>
+
+        <!-- Bear Gibbs -->
+        <div class="bg-white p-8 retro-border shadow-retro flex flex-col justify-between transform hover:-translate-y-2 transition-transform">
+          <div class="space-y-6">
+            <div class="flex text-vintage-gold gap-1">
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+            </div>
+            <p class="text-vintage-dark font-medium italic leading-relaxed text-lg">
+              "This place is WONDERFUL! Anything and everything you need for your pup, plus they gave me a 5 lb bag of food for free because I adopted from a rescue they partner with! The staff was amazing, so helpful, friendly, and kind!"
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t-4 border-vintage-paper">
+            <div class="font-display text-2xl text-vintage-blue">Bear Gibbs</div>
+            <div class="text-xs text-vintage-dark font-black uppercase tracking-wider mt-1">Anthem Shopper</div>
+          </div>
+        </div>
+
+        <!-- Nancy Shaw -->
+        <div class="bg-white p-8 retro-border shadow-retro flex flex-col justify-between transform hover:-translate-y-2 transition-transform">
+          <div class="space-y-6">
+            <div class="flex text-vintage-gold gap-1">
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+              <i data-lucide="star" class="w-6 h-6 fill-vintage-gold"></i>
+            </div>
+            <p class="text-vintage-dark font-medium italic leading-relaxed text-lg">
+              "Every time I go to the Sahara store the employees are TOTALLY AWESOME! They carry large bags out to my car, know their inventory inside and out, and are so gentle with dogs. This place is a true Las Vegas gem."
+            </p>
+          </div>
+          <div class="mt-8 pt-6 border-t-4 border-vintage-paper">
+            <div class="font-display text-2xl text-vintage-blue">Nancy Shaw</div>
+            <div class="text-xs text-vintage-dark font-black uppercase tracking-wider mt-1">Sahara Shopper</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Retro Location Cards -->
+  <section id="locations" class="py-24 bg-vintage-paper bg-[url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'2\' cy=\'2\' r=\'2\' fill=\'%231E3A8A\' fill-opacity=\'0.05\'/%3E%3C/svg%3E')]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="font-display text-5xl sm:text-6xl text-vintage-blue tracking-wide">
+          8 Valley-Wide Locations
+        </h2>
+        <div class="w-24 h-2 bg-vintage-royal mx-auto"></div>
+        <p class="text-vintage-dark text-xl font-bold uppercase tracking-widest mt-4">Open 7 Days a Week • 9:00 AM – 8:00 PM</p>
+      </div>
+
+      <!-- Vegas Locations -->
+      <div class="mb-16">
+        <h3 class="font-display text-4xl text-vintage-red mb-8 border-b-4 border-vintage-red inline-block pb-2">Las Vegas Outlets</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="bg-white retro-border p-6 shadow-retro hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#1E3A8A] transition-transform">
+            <h4 class="font-display text-2xl text-vintage-blue mb-2">Rainbow Store</h4>
+            <p class="text-sm font-bold text-vintage-dark mb-6 h-10">6181 S Rainbow Blvd #101<br>Las Vegas, NV 89118</p>
+            <div class="space-y-3 pt-6 border-t-4 border-vintage-paper">
+              <a href="tel:7027786569" class="block w-full text-center bg-vintage-paper retro-border py-3 font-black text-vintage-blue uppercase tracking-wider hover:bg-vintage-gold transition-colors">(702) 778-6569</a>
+            </div>
+          </div>
+
+          <div class="bg-white retro-border p-6 shadow-retro hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#1E3A8A] transition-transform">
+            <h4 class="font-display text-2xl text-vintage-blue mb-2">Sahara Store</h4>
+            <p class="text-sm font-bold text-vintage-dark mb-6 h-10">8565 W Sahara Ave #102<br>Las Vegas, NV 89117</p>
+            <div class="space-y-3 pt-6 border-t-4 border-vintage-paper">
+              <a href="tel:7028698690" class="block w-full text-center bg-vintage-paper retro-border py-3 font-black text-vintage-blue uppercase tracking-wider hover:bg-vintage-gold transition-colors">(702) 869-8690</a>
+            </div>
+          </div>
+
+          <div class="bg-white retro-border p-6 shadow-retro hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#1E3A8A] transition-transform">
+            <h4 class="font-display text-2xl text-vintage-blue mb-2">Centennial Store</h4>
+            <p class="text-sm font-bold text-vintage-dark mb-6 h-10">6420 Sky Pointe Dr #140<br>Las Vegas, NV 89131</p>
+            <div class="space-y-3 pt-6 border-t-4 border-vintage-paper">
+              <a href="tel:7022011395" class="block w-full text-center bg-vintage-paper retro-border py-3 font-black text-vintage-blue uppercase tracking-wider hover:bg-vintage-gold transition-colors">(702) 201-1395</a>
+            </div>
+          </div>
+
+          <div class="bg-white retro-border p-6 shadow-retro hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#1E3A8A] transition-transform">
+            <h4 class="font-display text-2xl text-vintage-blue mb-2">Hualapai Store</h4>
+            <p class="text-sm font-bold text-vintage-dark mb-6 h-10">6760 N Hualapai Way #185<br>Las Vegas, NV 89149</p>
+            <div class="space-y-3 pt-6 border-t-4 border-vintage-paper">
+              <a href="tel:7252051188" class="block w-full text-center bg-vintage-paper retro-border py-3 font-black text-vintage-blue uppercase tracking-wider hover:bg-vintage-gold transition-colors">(725) 205-1188</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Henderson Locations -->
+      <div>
+        <h3 class="font-display text-4xl text-vintage-royal mb-8 border-b-4 border-vintage-royal inline-block pb-2">Henderson Outlets</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="bg-white retro-border p-6 shadow-[6px_6px_0_0_#0088CC] hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#0088CC] transition-transform">
+            <h4 class="font-display text-2xl text-vintage-blue mb-2">Anthem Store</h4>
+            <p class="text-sm font-bold text-vintage-dark mb-6 h-10">2581 Anthem Village Dr<br>Henderson, NV 89052</p>
+            <div class="space-y-3 pt-6 border-t-4 border-vintage-paper">
+              <a href="tel:7029923622" class="block w-full text-center bg-vintage-paper retro-border py-3 font-black text-vintage-blue uppercase tracking-wider hover:bg-vintage-gold transition-colors">(702) 992-3622</a>
+            </div>
+          </div>
+
+          <div class="bg-white retro-border p-6 shadow-[6px_6px_0_0_#0088CC] hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#0088CC] transition-transform">
+            <h4 class="font-display text-2xl text-vintage-blue mb-2">St Rose Store</h4>
+            <p class="text-sm font-bold text-vintage-dark mb-6 h-10">2960 St Rose Pkwy #170<br>Henderson, NV 89052</p>
+            <div class="space-y-3 pt-6 border-t-4 border-vintage-paper">
+              <a href="tel:7029017557" class="block w-full text-center bg-vintage-paper retro-border py-3 font-black text-vintage-blue uppercase tracking-wider hover:bg-vintage-gold transition-colors">(702) 901-7557</a>
+            </div>
+          </div>
+
+          <div class="bg-white retro-border p-6 shadow-[6px_6px_0_0_#0088CC] hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#0088CC] transition-transform">
+            <h4 class="font-display text-2xl text-vintage-blue mb-2">Green Valley</h4>
+            <p class="text-sm font-bold text-vintage-dark mb-6 h-10">55 S Valle Verde Dr #300<br>Henderson, NV 89012</p>
+            <div class="space-y-3 pt-6 border-t-4 border-vintage-paper">
+              <a href="tel:7252041480" class="block w-full text-center bg-vintage-paper retro-border py-3 font-black text-vintage-blue uppercase tracking-wider hover:bg-vintage-gold transition-colors">(725) 204-1480</a>
+            </div>
+          </div>
+
+          <div class="bg-white retro-border p-6 shadow-[6px_6px_0_0_#0088CC] hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#0088CC] transition-transform">
+            <h4 class="font-display text-2xl text-vintage-blue mb-2">Sunset Store</h4>
+            <p class="text-sm font-bold text-vintage-dark mb-6 h-10">2714 N Green Valley Pkwy<br>Henderson, NV 89014</p>
+            <div class="space-y-3 pt-6 border-t-4 border-vintage-paper">
+              <a href="tel:7029923886" class="block w-full text-center bg-vintage-paper retro-border py-3 font-black text-vintage-blue uppercase tracking-wider hover:bg-vintage-gold transition-colors">(702) 992-3886</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-vintage-dark py-12 border-t-4 border-vintage-blue">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="font-display text-3xl text-vintage-gold tracking-widest uppercase">Dog Supplies Outlet</h2>
+      <p class="text-vintage-paper font-bold uppercase tracking-widest text-sm">
+        Voted Best Pet Stores In Las Vegas & Henderson
+      </p>
+      <div class="w-full h-px bg-vintage-blue my-8"></div>
+      <p class="text-slate-400 font-bold text-xs uppercase tracking-wider">
+        &copy; 2013–2026 Dog Supplies Outlet. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    lucide.createIcons();
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Hero Slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    function updateSlider(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove('opacity-0', 'z-0');
+          slide.classList.add('opacity-100', 'z-10');
+        } else {
+          slide.classList.remove('opacity-100', 'z-10');
+          slide.classList.add('opacity-0', 'z-0');
+        }
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      updateSlider((currentSlide + 1) % slides.length);
+      resetAutoSlide();
+    }
+    function prevSlide() {
+      updateSlider((currentSlide - 1 + slides.length) % slides.length);
+      resetAutoSlide();
+    }
+    function resetAutoSlide() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    // Loyalty Program Calculator
+    const spendRange = document.getElementById('spendRange');
+    const spendDisplay = document.getElementById('spendDisplay');
+    const pointsOutput = document.getElementById('pointsOutput');
+    const dollarsOutput = document.getElementById('dollarsOutput');
+
+    spendRange.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      spendDisplay.textContent = `$${val}`;
+      const annualPoints = val * 12;
+      pointsOutput.textContent = `${annualPoints.toLocaleString()} pts`;
+      
+      const cashCredit = Math.round((annualPoints / 500) * 60);
+      const totalBonus = cashCredit + 65;
+      dollarsOutput.textContent = `$${totalBonus}+ Value`;
+    });
+  </script>
+</body>
+</html>
